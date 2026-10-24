@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Aura Cafe & Restaurant</title>
+    <!-- Google Fonts for Elegant Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">L'Aura<span>.</span></a>
+            <nav class="navbar" id="navbar">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#ambience">Ambience</a>
+                <a href="#chefs">Our Chefs</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Location & Hours</a>
+                <a href="#reservation" class="btn-nav">Book a Table</a>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Exquisite Flavors & Cozy Ambience</h1>
+            <p>Experience culinary artistry crafted with passion, local ingredients, and timeless elegance.</p>
+            <div class="hero-btns">
+                <a href="#reservation" class="btn btn-primary">Reserve a Table</a>
+                <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sections -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Taste the Magic</span>
+                <h2>Our Curated Menu</h2>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active">Starters</button>
+                <button class="tab-btn">Main Course</button>
+                <button class="tab-btn">Desserts</button>
+                <button class="tab-btn">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Truffle Arancini">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3>Truffle Arancini</h3>
+                            <span class="price">$16</span>
+                        </div>
+                        <p>Crispy risotto balls infused with black truffle oil, wild mushrooms, and melted mozzarella.</p>
+                    </div>
+                </div>
+
+    </section>
+                        <p>Friday – Sunday: 8:00 AM – 11:30 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Contact</h4>
+                        <p>Phone: +1 (555) 382-9401</p>
+                        <p>Email: reservations@lauracafe.com</p>
+                    </div>
+                </div>
+            </div>
+
+           <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="number" placeholder="Number of Guests" min="1" max="20" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                        <input type="time" required>
+                    </div>
+                    <textarea placeholder="Special Requests or Dietary Requirements" rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary full-width">Confirm Reservation</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 L'Aura Cafe & Restaurant. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple JavaScript for Responsive Mobile Menu Toggle -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePulse - Movie Reviews & Ratings</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-film"></i> Cine<span>Pulse</span></div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Top Rated</a>
+            <a href="#">Reviews</a>
+        </nav>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search movies, cast...">
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Featured Critique</span>
+                <h1>Dune: Part Two</h1>
+                <p class="hero-synopsis">Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.</p>
+                <div class="hero-meta">
+                    <span><i class="fa-solid fa-calendar"></i> March 1, 2024</span>
+                    <span><i class="fa-solid fa-clock"></i> 2h 46m</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 9.1/10</span>
+                </div>
+                <button class="primary-btn">Read Full Review</button>
+            </div>
+        </section>
+
+        <!-- Movie Grid Section -->
+        <section class="movies-section">
+            <h2>Trending & Latest Reviews</h2>
+            
+            <div class="movie-grid">
+                
+                <!-- Movie Card 1 -->
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=500" alt="Interstellar Poster">
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 8.7</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="genres">
+                            <span class="genre">Sci-Fi</span>
+                            <span class="genre">Drama</span>
+                        </div>
+                        <h3>Interstellar</h3>
+                        <p class="release-date">Released: Nov 7, 2014</p>
+                        <p class="synopsis-snippet">A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                        <div class="card-footer">
+                            <span class="critic-score">Critic Score: 85%</span>
+                            <button class="details-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 2 -->
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=500" alt="Cyberpunk Odyssey Poster">
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 8.2</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="genres">
+                            <span class="genre">Action</span>
+                            <span class="genre">Cyberpunk</span>
+                        </div>
+                        <h3>Neon Horizon</h3>
+                        <p class="release-date">Released: July 18, 2025</p>
+                        <p class="synopsis-snippet">In a sprawling megacity governed by AI syndicates, a rogue netrunner uncovers a system-breaking secret.</p>
+                        <div class="card-footer">
+                            <span class="critic-score">Critic Score: 78%</span>
+                            <button class="details-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 3 -->
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&q=80&w=500" alt="Fantasy Realm Poster">
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 9.0</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="genres">
+                            <span class="genre">Fantasy</span>
+                            <span class="genre">Adventure</span>
+                        </div>
+                        <h3>Chronicles of Eldoria</h3>
+                        <p class="release-date">Released: Dec 15, 2024</p>
+                        <p class="synopsis-snippet">An unlikely fellowship embarks on a perilous quest across enchanted lands to restore the eternal light.</p>
+                        <div class="card-footer">
+                            <span class="critic-score">Critic Score: 92%</span>
+                            <button class="details-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Card 4 -->
+                <div class="movie-card">
+                    <div class="poster-container">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=500" alt="Mystery Thriller Poster">
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 7.9</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="genres">
+                            <span class="genre">Mystery</span>
+                            <span class="genre">Thriller</span>
+                        </div>
+                        <h3>The Silent Echo</h3>
+                        <p class="release-date">Released: Oct 05, 2024</p>
+                        <p class="synopsis-snippet">A seasoned detective investigates a cryptic series of clues left behind in an abandoned coastal lighthouse.</p>
+                        <div class="card-footer">
+                            <span class="critic-score">Critic Score: 80%</span>
+                            <button class="details-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

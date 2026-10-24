@@ -1,0 +1,396 @@
+/* ==========================================
+   1. Base Reset & Variables
+   ================================          */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+}
+
+:root {
+    --primary-color: #2c221e;
+    --accent-color: #c5a880; /* Warm gold/bronze */
+    --bg-light: #fdfbf7;
+    --bg-dark: #1a1412;
+    --text-main: #4a403b;
+    --text-light: #7a6e67;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.7;
+}
+
+p, span, a, input, select, textarea, button {
+    font-family: 'Inter', sans-serif; /* Clean sans-serif for body reading */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Headings */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   2. Navigation Bar
+   ================================          */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: var(--primary-color);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.book-table-btn {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.book-table-btn:hover {
+    background: var(--white);
+}
+
+/* ==========================================
+   3. Menu Sections Layout
+   ================================          */
+.menu-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.2rem 0;
+    border-bottom: 1px dashed #e2d9d2;
+}
+
+.item-details h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.item-details p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* ==========================================
+   4. Chef Profiles
+   ================================          */
+.chefs-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.chefs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.chef-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.chef-card:hover {
+    transform: translateY(-5px);
+}
+
+.chef-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chef-info {
+    padding: 1.5rem;
+}
+
+.chef-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.chef-role {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* ==========================================
+   5. Restaurant Ambience Gallery
+   ================================          */
+.ambience-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.ambience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.ambience-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.ambience-img:hover {
+    filter: brightness(0.9);
+}
+
+/* ==========================================
+   6. Customer Testimonials
+   ================================          */
+.testimonials-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.customer-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   7. Opening Hours & Location Details
+   ================================          */
+.info-section {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5rem 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.info-box h3 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   8. Table Reservation Form
+   ================================          */
+.reservation-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.reservation-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-light);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #dcd3cd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    background: var(--white);
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.submit-btn {
+    grid-column: span 2;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   9. Responsive Media Queries
+   ================================          */
+@media (max-width: 900px) {
+    .ambience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reservation-form {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    .submit-btn {
+        grid-column: span 1;
+    }
+    .nav-links {
+        display: none; /* Can be paired with hamburger menu JS */
+    }
+}

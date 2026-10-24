@@ -1,0 +1,337 @@
+/* --- CSS Reset & Variables --- */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #FBF9F5;          /* Warm Cream */
+    --bg-tint: #F2EFE9;           /* Soft Muted Taupe/Green tint */
+    --primary-color: #4A6B5D;     /* Sage Green */
+    --primary-hover: #3B554A;     /* Darker Sage */
+    --text-main: #2C3531;         /* Deep Charcoal */
+    --text-muted: #626D68;        /* Muted Gray-Green */
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.bg-tint {
+    background-color: var(--bg-tint);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* --- Navigation --- */
+.header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid rgba(74, 107, 93, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 7rem 2rem;
+    text-align: center;
+    background: linear-gradient(rgba(251, 249, 245, 0.8), rgba(251, 249, 245, 0.95)), 
+                url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --- Section Titles --- */
+.section-title {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-size: 2.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+/* --- Cards (Yoga Poses) --- */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pose-1 { background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80'); }
+.pose-2 { background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80'); }
+.pose-3 { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80'); }
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.card-body p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- Meditation Cards --- */
+.meditation-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.meditation-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.meditation-card p {
+    color: var(--text-muted);
+}
+
+/* --- Schedule Table --- */
+.table-wrapper {
+    margin-top: 3rem;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 1.25rem 1.5rem;
+}
+
+.schedule-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 500;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: rgba(74, 107, 93, 0.03);
+}
+
+.schedule-table td {
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* --- Pricing Cards --- */
+.price-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.03);
+}
+
+.price-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.price span {
+    font-size: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-muted);
+}
+
+.price-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--text-main);
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Can be expanded with a mobile menu toggle if needed */
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
+}
